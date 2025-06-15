@@ -4,7 +4,7 @@ const props = defineProps({
   description: String,
   image: String,
   imageAlt: String,
-  buttons: Array
+  buttons: Array,
   brand: Object
 });
 </script>
