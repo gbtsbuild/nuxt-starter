@@ -5,6 +5,7 @@ const props = defineProps({
   image: String,
   imageAlt: String,
   buttons: Array
+  brand: Object
 });
 </script>
 
@@ -14,7 +15,11 @@ const props = defineProps({
       <NuxtImg class="rounded-lg" sizes="100vw lg:600px" :src="image" :alt="imageAlt" v-if="image" />
     </div>
     <div class="flex-1 w-full">
-      <h1 class="text-4xl font-bold text-zinc-800 sm:text-5xl text-balance" v-if="title">{{ title }}</h1>
+      <div class="mb-6">
+  <h1 class="text-5xl font-extrabold" style="color: #0b1c2c">{{ brand.main }}</h1>
+  <p class="text-lg text-gray-700 mt-2">{{ brand.tagline }}</p>
+ </div>
+ <h1 class="text-4xl font-bold text-zinc-800 sm:text-5xl text-balance" v-if="title">{{ title }}</h1>
       <p class="max-w-xl mt-4 text-lg text-zinc-600 sm:text-xl" v-if="description">
         {{ description }}
       </p>
