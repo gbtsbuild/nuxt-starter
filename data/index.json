@@ -2,16 +2,17 @@
   "hero": {
     "title": "We Offer a Wide Range of Quality Building Materials Nationwide",
     "description": "From roofing sheets to appliances and security solutions, GBTS Builders Solution Ltd connects you to top-grade materials for your construction projects.",
-   "brand": 
-    "main": "GBTS",
-    "tagline": "Your One-Stop-Shop For Building Materials" [
+    "brand": {
+      "main": "GBTS",
+      "tagline": "Your One-Stop-Shop For Building Materials"
+    },
+    "buttons": [
       {
         "label": "Shop Now",
         "url": "/products"
       }
     ]
   },
-},
   "features": {
     "title": "Why Choose Us?",
     "description": "We are committed to quality, convenience, and customer satisfaction.",
@@ -34,32 +35,32 @@
       }
     ]
   },
-"products": {
-  "title": "Our Product Categories",
-  "description": "Explore our range of quality building materials carefully selected to meet your construction needs.",
-  "items": [
-    {
-      "title": "Roofing Sheets",
-      "description": "Durable and weather-resistant roofing sheets in various profiles and finishes."
-    },
-    {
-      "title": "Security Locks",
-      "description": "High-quality door locks for maximum protection and stylish entrances."
-    },
-    {
-      "title": "Advanced Hand Tools",
-      "description": "Top-grade hand tools suitable for DIYers and professionals."
-    },
-    {
-      "title": "Appliances",
-      "description": "Certified appliances and accessories for comfortable home use."
-    },
-    {
-      "title": "Paints & Coatings",
-      "description": "Premium paint products for both indoor and outdoor applications."
-    }
-  ]
-}
+  "products": {
+    "title": "Our Product Categories",
+    "description": "Explore our range of quality building materials carefully selected to meet your construction needs.",
+    "items": [
+      {
+        "title": "Roofing Sheets",
+        "description": "Durable and weather-resistant roofing sheets in various profiles and finishes."
+      },
+      {
+        "title": "Security Locks",
+        "description": "High-quality door locks for maximum protection and stylish entrances."
+      },
+      {
+        "title": "Advanced Hand Tools",
+        "description": "Top-grade hand tools suitable for DIYers and professionals."
+      },
+      {
+        "title": "Appliances",
+        "description": "Certified appliances and accessories for comfortable home use."
+      },
+      {
+        "title": "Paints & Coatings",
+        "description": "Premium paint products for both indoor and outdoor applications."
+      }
+    ]
+  },
   "categories": {
     "title": "Shop by Category",
     "items": [
@@ -131,3 +132,4 @@
       "address": "Shop 1, Jubilee Market, Ikare Akoko 342211, Ondo Nigeria"
     }
   }
+}
