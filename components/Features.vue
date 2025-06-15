@@ -8,7 +8,7 @@ const props = defineProps({
 
 <style scoped>
 .section-spacing {
-  @apply py-16 px-4;
+  @apply py-4 px-4;
 }
 .section-title {
   @apply text-3xl font-bold text-center text-zinc-800 sm:text-4xl;
