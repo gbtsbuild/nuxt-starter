@@ -1,13 +1,13 @@
 {
   "hero": {
-    "title": "Build Blazing-Fast Websites with Nuxt.js & Netlify",
-    "description": "Craft high-performing, SEO-friendly web experiences with the dynamic power of Nuxt.js and the speed of Netlify's global edge network.",
-    "image": "images/hero.jpg",
-    "imageAlt": "Nuxt logo and title on abstract background",
-    "buttons": [
+    "title": "We Offer The Best Quality Building Materials For Your Projects Nationwide",
+    "description": "From roofing sheets to appliances and security solutions, GBTS Builders Solution Ltd connects you to top-grade materials for your construction projects.",
+   "brand": 
+    "main": "GBTS",
+    "tagline": "Your One-Stop-Shop For Building Materials" [
       {
-        "label": "Get Started Today",
-        "url": "https://www.netlify.com/"
+        "label": "Shop now",
+        "url": "/products"
       }
     ]
   },
