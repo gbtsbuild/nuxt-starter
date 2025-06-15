@@ -14,16 +14,15 @@ const props = defineProps({
   @apply text-3xl font-bold text-center text-zinc-800 sm:text-4xl;
 }
 </style>
-</script>
+
 <template>
   <section class="section-spacing">
     <h2 class="section-title" v-if="title">
       {{ title }}
     </h2>
     <p
-      class="max-w-3xl mx-auto mt-4 text-lg text-center text-zinc-600"
+      class="max-w-3xl mx-auto mt-4 text-lg text-center text-zinc-600">
       v-if="description"
-    >
       {{ description }}
     </p>
 
@@ -31,8 +30,7 @@ const props = defineProps({
       <div
         v-for="item of items"
         :key="item.title"
-        class="p-8 border border-zinc-200 shadow-sm rounded-xl bg-white"
-      >
+        class="p-8 border border-zinc-200 shadow-sm rounded-xl bg-white">
         <h3 class="text-2xl font-semibold text-zinc-800" v-if="item.title">
           {{ item.title }}
         </h3>
