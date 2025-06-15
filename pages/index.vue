@@ -15,22 +15,46 @@ definePageMeta({
       :image="page.hero.image"
       :imageAlt="page.hero.imageAlt"
       :buttons="page.hero.buttons"
-    ></Hero>
-    <Logos :title="page.logos.title" :icons="page.logos.icons"></Logos>
+    />
+
+    <Brand
+      :highlight="page.brand.highlight"
+      :tagline="page.brand.tagline"
+    />
+
+    <Categories
+      :title="page.categories.title"
+      :description="page.categories.description"
+      :items="page.categories.items"
+    />
+
     <Features
       :title="page.features.title"
       :description="page.features.description"
       :items="page.features.items"
-    ></Features>
-    <Testimonials
-      :title="page.testimonials.title"
-      :description="page.testimonials.description"
-      :items="page.testimonials.items"
-    ></Testimonials>
+    />
+
+    <Products
+      :title="page.products.title"
+      :description="page.products.description"
+      :items="page.products.items"
+    />
+
+    <Blog
+      :title="page.blog.title"
+      :description="page.blog.description"
+      :items="page.blog.items"
+    />
+
     <Cta
       :title="page.cta.title"
       :description="page.cta.description"
       :buttons="page.cta.buttons"
-    ></Cta>
+    />
+
+    <Footer
+      :columns="page.footer.columns"
+      :bottomLinks="page.footer.bottomLinks"
+    />
   </Container>
 </template>
