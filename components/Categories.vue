@@ -33,7 +33,7 @@ const categories = [
 
 <style scoped>
 .section-spacing {
-  @apply py-16 px-4;
+  @apply py-4 px-4;
 }
 
 .section-title {
