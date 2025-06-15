@@ -50,7 +50,7 @@ definePageMeta({
       :title="page.cta.title"
       :description="page.cta.description"
       :buttons="page.cta.buttons"
-    />
+    </Cta>
 
     <Footer
       :columns="page.footer.columns"
