@@ -5,22 +5,67 @@ const props = defineProps({
   buttons: Array
 });
 </script>
+
 <template>
-  <section class="text-center py-4 px-4 bg-white">
-    <div>
-      <h1 class="text-5xl font-extrabold" style="color: #6e8efb">GBTS</h1>
-      <p class="mt-2 text-lg text-gray-800">Your One-Stop-Shop For Building Materials</p>
-    </div>
-    <p class="mt-6 max-w-2xl mx-auto text-xl text-gray-600">
-      From roofing sheets to appliances and security solutions, GBTS Builders Solution Ltd connects you to top-grade materials for your construction projects.
-    </p>
-    <div class="mt-8">
-      <NuxtLink
-        to="/products"
-        class="inline-block px-3 py-3 bg-[#6e8efb] text-white rounded-lg shadow-md hover:bg-blue-700 transition"
-      >
-        Shop Now
-      </NuxtLink>
+  <section class="cta-section">
+    <div class="cta-content">
+      <h2 class="cta-title">{{ title }}</h2>
+      <p class="cta-description">{{ description }}</p>
+      <div class="cta-buttons">
+        <NuxtLink
+          v-for="(button, index) in buttons"
+          :key="index"
+          :to="button.url"
+          class="cta-button"
+        >
+          {{ button.label }}
+        </NuxtLink>
+      </div>
     </div>
   </section>
 </template>
+
+<style scoped>
+.cta-section {
+  background-color: #f9fafb;
+  padding: 2.5rem 1.25rem;
+  text-align: center;
+}
+
+.cta-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0b1c2c;
+  margin-bottom: 1rem;
+}
+
+.cta-description {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  font-size: 1.125rem;
+  color: #4b5563;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #6e8efb;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #4e6fd1;
+}
+</style>
