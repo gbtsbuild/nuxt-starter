@@ -33,10 +33,18 @@ const categories = [
 
 <style scoped>
 .section-spacing {
-  @apply py-4 px-4;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .section-title {
-  @apply text-3xl font-bold text-center text-zinc-800 mb-10;
+  font-size: 1.875rem;      /* text-3xl */
+  line-height: 2.25rem;     /* text-3xl */
+  font-weight: 700;         /* font-bold */
+  text-align: center;       /* text-center */
+  color: #27272a;           /* text-zinc-800 */
+  margin-bottom: 2.5rem;    /* mb-10 */
 }
 </style>
