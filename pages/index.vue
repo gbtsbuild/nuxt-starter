@@ -12,8 +12,6 @@ definePageMeta({
     <Hero
       :title="page.hero.title"
       :description="page.hero.description"
-      :image="page.hero.image"
-      :imageAlt="page.hero.imageAlt"
       :buttons="page.hero.buttons"
     />
 
