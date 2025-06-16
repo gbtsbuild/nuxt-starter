@@ -1,47 +1,98 @@
 <template>
-        <section class="section-spacing">
-          <h2 class="section-title" v-if="title">
-            {{ title }}
-          </h2>
-          <p class="max-w-3xl mx-auto mt-4 text-lg text-center text-zinc-600" v-if="description">
-            {{ description }}
-          </p>
-      
-          <div class="grid gap-6 mt-10 mb-20 sm:grid-cols-2 lg:grid-cols-3">
-            <div
-              v-for="item in items"
-              :key="item.title"
-              class="rounded-xl overflow-hidden border border-zinc-200 shadow-sm bg-white p-6 hover:shadow-md transition-shadow duration-300"
-            >
-              <h3 class="text-xl font-semibold text-zinc-800 mb-2" v-if="item.title">
-                {{ item.title }}
-              </h3>
-              <p class="text-zinc-600" v-if="item.description">
-                {{ item.description }}
-              </p>
-            </div>
-          </div>
-        </section>
-      </template>
-      
-      <script setup>
-      const props = defineProps({
-        title: String,
-        description: String,
-        items: Array
-      });
-      </script>
-      
-      <style scoped lang="scss"></style>
-      .section-spacing {
-        padding-top: 1rem;    /* py-4 */
-        padding-bottom: 1rem; /* py-4 */
-        padding-left: 1rem;   /* px-4 */
-        padding-right: 1rem;  /* px-4 */
-      }
-      @media (min-width: 640px) {
-        .section-title {
-          font-size: 2.25rem;     /* sm:text-4xl */
-          line-height: 2.5rem;    /* sm:text-4xl */
-        }
-      }
+  <section class="section">
+    <h2 class="section-title" v-if="title">
+      {{ title }}
+    </h2>
+    <p class="section-description" v-if="description">
+      {{ description }}
+    </p>
+
+    <div class="cards-grid">
+      <div
+        v-for="item in items"
+        :key="item.title"
+        class="card"
+      >
+        <h3 class="card-title" v-if="item.title">
+          {{ item.title }}
+        </h3>
+        <p class="card-description" v-if="item.description">
+          {{ item.description }}
+        </p>
+      </div>
+    </div>
+  </section>
+</template>
+
+<script setup>
+const props = defineProps({
+  title: String,
+  description: String,
+  items: Array
+});
+</script>
+
+<style scoped>
+.section {
+  padding: 1rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.section-description {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.cards-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 640px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.card-description {
+  color: #555;
+  font-size: 1rem;
+}
+</style>
