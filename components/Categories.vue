@@ -9,42 +9,92 @@ const categories = [
 </script>
 
 <template>
-  <section class="section-spacing">
+  <section class="category-section">
     <h2 class="section-title">Shop by Category</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div
-        v-for="(item, index) in categories"
-        :key="index"
-        class="rounded-xl overflow-hidden shadow group relative"
-      >
-        <NuxtImg :src="item.image" :alt="item.name" class="w-full h-64 object-cover" />
-        <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
-          <h3 class="text-white text-2xl font-bold">{{ item.name }}</h3>
+    <div class="category-grid">
+      <div v-for="(item, index) in categories" :key="index" class="category-card">
+        <img :src="item.image" :alt="item.name" class="category-image" />
+        <div class="overlay">
+          <h3 class="category-name">{{ item.name }}</h3>
+          <NuxtLink :to="item.link">
+            <button class="explore-button">Explore</button>
+          </NuxtLink>
         </div>
-        <NuxtLink :to="item.link">
-          <button class="absolute bottom-4 right-4 bg-white text-emerald-600 font-semibold px-4 py-2 rounded-full shadow hover:bg-emerald-600 hover:text-white transition">
-            Explore
-          </button>
-        </NuxtLink>
       </div>
     </div>
   </section>
 </template>
 
 <style scoped>
-.section-spacing {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+.category-section {
+  padding: 1rem;
 }
 
 .section-title {
-  font-size: 1.875rem;      /* text-3xl */
-  line-height: 2.25rem;     /* text-3xl */
-  font-weight: 700;         /* font-bold */
-  text-align: center;       /* text-center */
-  color: #27272a;           /* text-zinc-800 */
-  margin-bottom: 2.5rem;    /* mb-10 */
+  font-size: 1.875rem;
+  font-weight: 700;
+  text-align: center;
+  color: #27272a;
+  margin-bottom: 2.5rem;
+}
+
+.category-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.category-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.category-image {
+  width: 100%;
+  height: 16rem;
+  object-fit: cover;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.category-name {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.explore-button {
+  background-color: #ffffff;
+  color: #059669; /* emerald-600 */
+  font-weight: 600;
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.explore-button:hover {
+  background-color: #059669;
+  color: #ffffff;
 }
 </style>
