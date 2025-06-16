@@ -1,3 +1,11 @@
-@theme {
-  --font-display: "Helvetica", "sans-serif";
+:root {
+  --font-display: "Helvetica", sans-serif;
+}
+
+body {
+  font-family: var(--font-display);
+  color: #333;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
 }
