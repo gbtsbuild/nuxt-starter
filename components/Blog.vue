@@ -30,6 +30,7 @@
 }
 
 .section-title {
-  @apply text-3xl font-bold text-center text-zinc-800 mb-10;
+  <h1 class="text-3xl font-bold text-center text-zinc-800 mb-10">
+  </h1>
 }
 </style>
